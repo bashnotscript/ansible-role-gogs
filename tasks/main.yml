@@ -34,8 +34,8 @@
     mode: 0755
   when: gogs_bin.stat.islnk is not defined
 
-- include: init-setup.yml
-- include: gogs-mysql.yml
+- include_tasks: init-setup.yml
+- include_tasks: gogs-mysql.yml
 
 - name: Create Gogs log folder.
   file:
